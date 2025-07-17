@@ -1,0 +1,182 @@
+:root{
+    --primary-color: hsl(0, 0%, 8%);
+    --primary-color2: hsl(0, 0%, 100%);
+    --green: hsl(75, 94%, 57%);
+    --grey-1: hsl(0, 0%, 20%);
+    --grey-2: hsl(0, 0%, 12%);
+}
+
+body{
+    background-color: var(--primary-color);
+    color: var(--primary-color2);
+    font-family: "Inter", sans-serif;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center;
+    padding: 1rem;
+    min-height: 100vh;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--grey-2);
+    gap: 20px;
+    border-radius: 10px;
+    padding: 1.7rem;
+    width: min(90%, 290px);
+    height: auto;
+}
+
+.profile-img, img{
+    border-radius: 50%;
+    width: max(42px, 7vw);
+    height: max(42px, 7vw);
+    object-fit: cover;
+}
+
+.profile-img{
+    margin-bottom: 0;
+}
+
+ .name{
+    font-weight: 600;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+
+.location{
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 28px;
+    color: var(--green);
+}
+
+.card-title{
+    font-weight: 400;
+    gap: 0px;
+}
+
+.info{
+    text-align: center;
+    font-size: 0.8rem;
+    margin-bottom: 0px;
+}
+
+.card-links{
+    width: 100%;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.card-links p {
+    margin: 10px 0;
+    padding: 17px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: var(--grey-1);
+}
+
+.attribution{
+    padding-top: 20px;
+    font-size: 0.8rem;
+}
+
+.attribution a{
+    text-decoration: none;
+    color: var(--primary-color2);
+}
+
+/*hover effect*/
+.card-links p:hover{
+    background-color: var(--green);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: var(--grey-2);
+    box-shadow: 0 8px 20px rgba(218, 216, 216, 0.3);
+    transform: scale(1.02);
+}
+
+
+/*mobile view*/
+@media (max-width: 768px) {
+    main {
+        padding: 0.5rem;
+        min-height: 100vh;
+    }
+
+    .profile-img, img {
+        width: max(50px, 10vw);
+        height: max(50px, 10vw);
+    }
+    
+    .name {
+        font-size: 1.3rem;
+        margin-bottom: 8px;
+    }
+    
+    .location {
+        font-size: 0.85rem;
+        margin-bottom: 25px;
+    }
+    
+    .info {
+        font-size: 0.75rem;
+    }
+    
+    .card-links {
+        font-size: 0.9rem;
+    }
+    
+    .card-links p {
+        padding: 12px 16px;
+        margin: 6px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    section {
+        width: min(98%, 320px);
+        padding: 1.2rem;
+        gap: 15px;
+    }
+    
+    .profile-img, img {
+        width: max(45px, 12vw);
+        height: max(45px, 12vw);
+    }
+    
+    .name {
+        font-size: 1.2rem;
+        margin-bottom: 6px;
+    }
+    
+    .location {
+        font-size: 0.8rem;
+        margin-bottom: 20px;
+    }
+    
+    .info {
+        font-size: 0.7rem;
+    }
+    
+    .card-links {
+        font-size: 0.85rem;
+    }
+    
+    .card-links p {
+        padding: 15px 14px;
+        margin: 5px 0;
+    }
+}
